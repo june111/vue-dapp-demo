@@ -23,8 +23,8 @@
       <li v-on:click="clickNumber">10</li>
     </ul>
     <img v-if="pending" id="loader" src="https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif" />
-    <p>账户：<span>{{myAddress}}</span></p>
-    <p>余额：<span>{{accountBalance}}</span> ETH</p>
+    <p>Address：<span>{{myAddress}}</span></p>
+    <p>Balance：<span>{{accountBalance}}</span> ETH</p>
     <div class="event" v-if="winEvent">
       <p>您猜的是：<span>{{chooseNum}}</span></p>
       <p>开奖：中奖数字为<span>{{luckyNum}}</span></p>
@@ -180,7 +180,7 @@ export default {
         // set the provider you want from Web3.providers
         // 后面涉及到合约event，故不能用Infura
         // this.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:7545")); //本地ganache
-        this.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); //本地同步的测试网络的节点
+        // this.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); //本地同步的测试网络的节点
         this.isMetamask = false
       }
       console.log('Get Web3!')
