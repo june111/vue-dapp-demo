@@ -1,110 +1,43 @@
-# vue-dapp
+# Vue Dapp demo
 
-> A Vue.js project
+<p align="center">
+	<a href="https://github.com/vuejs/vue">
+    	<img src="https://img.shields.io/badge/vue-2.5.2-brightgreen.svg" alt="vue" />
+  	</a>
+</p>
 
-## Build Setup
+English | [简体中文](./README.zh-CN.md)
 
-``` bash
-# install dependencies
+## Introduction
+
+A Dapp demo 
+
+
+
+Live version available at [http://blog.junezhu.top/wallet-web/](http://blog.junezhu.top/dapp-demo/)
+
+
+
+## Author
+
+**June** -> [email](mailto:ru-q-ur@163.com)
+
+## Getting started
+```bash
+# Installing
 npm install
-
-# serve with hot reload at localhost:8080
+# Compiles and hot-reloads for development
 npm run dev
+```
+App will be running at: http://localhost:8080
 
-# build for production with minification
+## Build 
+```bash
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-# Project Title
-
-One Paragraph of project description goes here
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
