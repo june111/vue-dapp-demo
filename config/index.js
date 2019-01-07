@@ -43,7 +43,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'vue-dapp-demo/',
+    assetsPublicPath: '/vue-dapp-demo/',
 
     /**
      * Source Maps
