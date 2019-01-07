@@ -13,7 +13,7 @@ A Dapp demo
 
 
 
-Live version available at [http://blog.junezhu.top/wallet-web/](http://blog.junezhu.top/dapp-demo/)
+Live version available at [http://blog.junezhu.top/wallet-web/](http://blog.junezhu.top/vue-dapp-demo/)
 
 
 

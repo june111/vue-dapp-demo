@@ -6,7 +6,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: 'dapp-demo/',
+  base: 'vue-dapp-demo/',
   routes: [{
     path: '/',
     name: 'casino-dapp',
