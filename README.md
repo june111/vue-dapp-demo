@@ -1,10 +1,9 @@
 # Vue Dapp demo
 
-<p align="center">
-	<a href="https://github.com/vuejs/vue">
-    	<img src="https://img.shields.io/badge/vue-2.5.2-brightgreen.svg" alt="vue" />
-  	</a>
-</p>
+[![Build Status](https://travis-ci.org/june111/vue-dapp-demo.svg?branch=master)](https://travis-ci.org/june111/vue-dapp-demo)
+
+[![Vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg)](https://github.com/vuejs/vue)
+
 
 English | [简体中文](./README.zh-CN.md)
 
