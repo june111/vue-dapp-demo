@@ -1,11 +1,11 @@
 <template>
   <div class="casino">
     <!-- 检查当前网络的按钮 -->
-    <!-- <button @click="checkNetwork" class="networkBtn">Network</button> -->
+    <!-- <button @click="checkNetwork" class="networkBtn">Network</button>
     <div v-if="showEnv" class="network">
       <p>Welcome to the <span v-if="isMetamask">Metamask</span></p>
       <p>{{network}}</p>
-    </div>
+    </div> -->
     <!-- 标题   -->
     <h1>Welcome to the Casino</h1>
     <p>Prize pool：{{contractBalance}} ETH</p>
@@ -197,55 +197,6 @@ export default {
           })
         } else {
           alert('Please log in to Metamask')
-
-          // const privateKey = Buffer.from(this.myPrivateKey, 'hex')
-          // var encoded = '0x' + abi.simpleEncode("bet(uint256)", number).toString('hex')
-
-          // this.getNonce().then(web3Nonce => {
-          //   // gas,gasPrice,value 单位是wei
-          //   const txParams = {
-          //     nonce: web3Nonce,
-          //     gas: window.web3.fromDecimal('300000'), //十进制数字或者十进制字符串转为十六进制
-          //     gasPrice: window.web3.fromDecimal('1000000'), //0.001 Gwei
-          //     value: window.web3.fromDecimal(window.web3.toWei(this.amount, 'ether')),
-          //     to: this.contractAddr,
-          //     from: this.myAddress,
-          //     data: encoded,
-          //     // EIP 155 chainId - mainnet: 1, ropsten: 3
-          //     chainId: 3
-          //   }
-          //   const tx = new EthereumTx(txParams)
-          //   tx.sign(privateKey)
-          //   const serializedTx = tx.serialize()
-
-          //   window.web3.eth.sendRawTransaction('0x' + serializedTx.toString('hex'), (err, result, data) => {
-          //     if (err) {
-          //       this.pending = false
-          //       console.error(err)
-          //     } else {
-          //       //捕捉 event
-          //       let Won = this.casino.Won()
-          //       Won.watch((err, result) => {
-          //         if (err) {
-          //           this.pending = false
-          //           console.error(err)
-          //         } else {
-          //           this.pending = false
-          //           let winningNumber = result.blockNumber % 10 + 1 // % 取余数
-          //           this.luckyNum = winningNumber
-          //           this.winEvent = result.args
-          //           this.winEvent._amount = parseInt(result.args._amount, 10) / Math.pow(10, 18);
-          //           this.checkCasinoBalance()
-          //           // 停止捕捉
-          //           Won.stopWatching();
-          //         }
-          //       })
-          //     }
-
-          //   });
-
-          // })
-
         }
       }
 
@@ -392,7 +343,5 @@ ul {
 .red {
   color: red;
 }
-
-@media only screen and (max-width: 1060px) {}
 
 </style>
