@@ -1,5 +1,4 @@
-# Vue Dapp demo
-[![Build Status](https://travis-ci.org/june111/vue-dapp-demo.svg?branch=master)](https://travis-ci.org/june111/vue-dapp-demo)
+# Vue Dapp demo [![Build Status](https://travis-ci.org/june111/vue-dapp-demo.svg?branch=master)](https://travis-ci.org/june111/vue-dapp-demo)
 [![Vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg)](https://github.com/vuejs/vue)
 [![codebeat badge](https://codebeat.co/badges/cb3d84d2-691c-4534-8aa5-4ed51387a15e)](https://codebeat.co/projects/github-com-june111-vue-dapp-demo-master)
 

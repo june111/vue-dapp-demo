@@ -1,5 +1,4 @@
-# Vue Dapp demo
-[![Build Status](https://travis-ci.org/june111/vue-dapp-demo.svg?branch=master)](https://travis-ci.org/june111/vue-dapp-demo)
+# Vue Dapp demo [![Build Status](https://travis-ci.org/june111/vue-dapp-demo.svg?branch=master)](https://travis-ci.org/june111/vue-dapp-demo)
 [![Vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg)](https://github.com/vuejs/vue)
 [![codebeat badge](https://codebeat.co/badges/cb3d84d2-691c-4534-8aa5-4ed51387a15e)](https://codebeat.co/projects/github-com-june111-vue-dapp-demo-master)
 
@@ -13,7 +12,7 @@ Because MetaMask is used for transaction signing, please install MetaMask before
 
 Live version available at [http://blog.junezhu.top/vue-dapp-demo/](http://blog.junezhu.top/vue-dapp-demo/)
 
-Demo tutorial available at [入门dAPP，看这篇就够了](https://blog.junezhu.top/2018/07/07/getting-started-dAPP-see-this-is-enough.html)
+Demo tutorial available at [Getting started with DAPP](https://blog.junezhu.top/2018/07/07/getting-started-dAPP-see-this-is-enough.html)
 
 ## Author
 
@@ -35,7 +34,7 @@ npm run build
 
 ## Acknowledge
 
-Demo reference tutorial：[Create your first Ethereum dAPP with Web3 and Vue.JS 系列](https://itnext.io/create-your-first-ethereum-dapp-with-web3-and-vue-js-c7221af1ed82)
+Demo reference tutorial：[Create your first Ethereum dAPP with Web3 and Vue.JS series](https://itnext.io/create-your-first-ethereum-dapp-with-web3-and-vue-js-c7221af1ed82)
 
 ## License
 
