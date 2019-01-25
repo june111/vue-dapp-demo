@@ -46,9 +46,16 @@ export default {
     this.setContract()
   },
   mounted() {
-    this.checkHouseEdge()
-    this.checkCasinoBalance()
-    this.getAccount()
+    this.$nextTick(function() {
+      this.checkHouseEdge()
+      this.checkCasinoBalance()
+      let time = setInterval(() => {
+        // if (this.flag === true) { clearInterval(time) }
+        this.getAccount()
+      }, 1000)
+    })
+
+
   },
   data() {
     return {
@@ -76,7 +83,7 @@ export default {
       showEnv: false,
 
       accountBalance: null,
-      contractBalance: null,
+      contractBalance: 0,
 
       chooseNum: null,
       luckyNum: null,
@@ -100,6 +107,7 @@ export default {
           ethereum.enable();
           // Acccounts now exposed
           this.isMetamask = true
+
         } catch (error) {
           // User denied account access...
           this.isMetamask = false
