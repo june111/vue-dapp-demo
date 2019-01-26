@@ -12,6 +12,8 @@
     Bet:
     <input v-model="amount" placeholder="0">Ether
     <h4>Guess（1～10）</h4>
+    <p>You can get a 1-to-1 odds on the winning bet </p>
+    <br>
     <!-- 猜数字 -->
     <ul class="block-number">
       <li v-for="item in Numbers" @click="clickNumber(item)">{{item}}</li>
@@ -21,8 +23,8 @@
     <!-- 用户信息 -->
     <p class="address">Address：{{myAddress}}</p>
     <p>Balance：{{accountBalance}} ETH</p>
+      <p v-if="isChooseNum">The number you guess is：{{chooseNum}}</p>
     <div class="event" v-if="winEvent">
-      <p>The number you guess is：{{chooseNum}}</p>
       <p>Lucky number is {{luckyNum}}</p>
       <p v-if="winEvent._status" class="green">
         Excellent!!! Get {{winEvent._amount}} ETH
@@ -86,6 +88,7 @@ export default {
       contractBalance: 0,
 
       chooseNum: null,
+      isChooseNum:false,
       luckyNum: null,
 
       Numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -167,9 +170,10 @@ export default {
     },
     clickNumber(number, event) {
       this.chooseNum = number
-      let pay = this.amount * (100 - this.odds) / 10
+      this.isChooseNum = true
+      let pay = this.amount * this.odds
       this.amount <= 0 ? alert('No way! There are too few bets.') : ''
-      this.contractBalance < pay ? alert('The prize pool is not enough, please reduce the bet.') : ''
+      this.contractBalance <= pay ? alert('The prize pool is not enough, please reduce the bet.') : ''
       if (this.contractBalance > pay && this.amount > 0) {
         this.winEvent = null
         this.pending = true
@@ -192,6 +196,7 @@ export default {
                   console.error(err)
                 } else {
                   this.pending = false
+                  this.amount = 0
                   let winningNumber = result.blockNumber % 10 + 1 // % 取余数
                   this.luckyNum = winningNumber
                   this.winEvent = result.args
