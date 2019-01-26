@@ -1,21 +1,16 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.0;
 
 contract Ownable {
-  address owner;
-  constructor () public {
-    owner = msg.sender;
+  constructor () public { 
+    owner = msg.sender; 
   }
-
-  modifier Owned {
-    require(msg.sender == owner);
-    _;
-  }
+  address payable owner;
 }
 
 contract Mortal is Ownable {
-  function kill() public Owned {
-    selfdestruct(owner);
-  }
+   function kill() public {
+        if (msg.sender == owner) selfdestruct(owner);
+    }
 }
 
 contract Casino is Mortal{
@@ -31,16 +26,12 @@ contract Casino is Mortal{
     houseEdge = _houseEdge;
   }
   
-  function() public { //fallback
-    revert();
-  }
-
   function bet(uint _number) payable public {
     require(_number > 0 && _number <= 10);
     require(msg.value >= minBet);
     uint winningNumber = block.number % 10 + 1;
     if (_number == winningNumber) {
-      uint amountWon = msg.value * (100 - houseEdge)/10;
+      uint amountWon = msg.value * houseEdge;
       if(!msg.sender.send(amountWon)) revert();
       emit Won(true, amountWon);
     } else {
@@ -48,8 +39,14 @@ contract Casino is Mortal{
     }
   }
   
-  function checkContractBalance() Owned public view returns(uint) {
-      address _contract = this;
-      return _contract.balance;
+  function getBalance()  public view returns(uint256) {
+      return address(this).balance;
   }
+   // Withdraw amount
+    function withdraw(uint amount) public returns (bool) {
+        require(amount > 0);
+        require(msg.sender==owner);
+        msg.sender.transfer(amount);
+        return true;
+    }
 }

@@ -1,13 +1,35 @@
-export const ABI = [{
+export const ABI = [
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getBalance",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "constant": false,
-    "inputs": [{
-      "name": "_number",
-      "type": "uint256"
-    }],
-    "name": "bet",
-    "outputs": [],
-    "payable": true,
-    "stateMutability": "payable",
+    "inputs": [
+      {
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -20,28 +42,36 @@ export const ABI = [{
     "type": "function"
   },
   {
-    "anonymous": false,
-    "inputs": [{
-        "indexed": false,
-        "name": "_status",
-        "type": "bool"
-      },
+    "constant": false,
+    "inputs": [
       {
-        "indexed": false,
-        "name": "_amount",
+        "name": "_number",
         "type": "uint256"
       }
     ],
-    "name": "Won",
-    "type": "event"
+    "name": "bet",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
   },
   {
+    "constant": true,
+    "inputs": [],
+    "name": "houseEdge",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
     "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "fallback"
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    "inputs": [{
+    "inputs": [
+      {
         "name": "_minBet",
         "type": "uint256"
       },
@@ -55,29 +85,24 @@ export const ABI = [{
     "type": "constructor"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "checkContractBalance",
-    "outputs": [{
-      "name": "",
-      "type": "uint256"
-    }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "houseEdge",
-    "outputs": [{
-      "name": "",
-      "type": "uint256"
-    }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "_status",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "Won",
+    "type": "event"
   }
 ]
 
-export const contractAddr = '0x34e97414cD12fE1b3d96B1C9ca6e437aC5FcfdB9' //测试网络上的
+export const contractAddr = '0x39EFaFde0B067F4021697Be98C0c3bBf7dC8B83c' //测试网络上的
+
+
