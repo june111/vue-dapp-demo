@@ -25,11 +25,14 @@ contract Casino is Mortal{
     minBet = _minBet;
     houseEdge = _houseEdge;
   }
-  
+ 
   function bet(uint _number) payable public {
     require(_number > 0 && _number <= 10);
     require(msg.value >= minBet);
-    uint winningNumber = block.number % 10 + 1;
+    bytes32 lucky = keccak256(abi.encodePacked(now, msg.sender));
+    uint winningNumber = uint(lucky) %10;
+    // uint winningNumber = block.number % 10 + 1;
+    
     if (_number == winningNumber) {
       uint amountWon = msg.value * houseEdge;
       if(!msg.sender.send(amountWon)) revert();

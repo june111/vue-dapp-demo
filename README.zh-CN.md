@@ -1,4 +1,4 @@
-# Vue Dapp demo [![Build Status](https://travis-ci.org/june111/vue-dapp-demo.svg?branch=master)](https://travis-ci.org/june111/vue-dapp-demo) [![Vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg)](https://github.com/vuejs/vue) [![codebeat badge](https://codebeat.co/badges/cb3d84d2-691c-4534-8aa5-4ed51387a15e)](https://codebeat.co/projects/github-com-june111-vue-dapp-demo-master)
+# 猜一猜（投注类DApp） [![Build Status](https://travis-ci.org/june111/vue-dapp-demo.svg?branch=master)](https://travis-ci.org/june111/vue-dapp-demo) [![Vue](https://img.shields.io/badge/vue-2.5.2-brightgreen.svg)](https://github.com/vuejs/vue) [![codebeat badge](https://codebeat.co/badges/cb3d84d2-691c-4534-8aa5-4ed51387a15e)](https://codebeat.co/projects/github-com-june111-vue-dapp-demo-master)
 
 [English](./README.md) | 简体中文
 
@@ -23,7 +23,7 @@ npm install
 # 启动服务
 npm run dev
 ```
-浏览器访问: http://localhost:8080
+浏览器访问: http://localhost:8080/vue-dapp-demo/
 
 ## 发布
 ```bash
