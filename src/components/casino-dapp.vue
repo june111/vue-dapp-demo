@@ -78,7 +78,7 @@ export default {
 
       odds: null,
 
-      amount: null,
+      amount: 0.001,
       pending: false,
       winEvent: null,
 
