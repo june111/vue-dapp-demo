@@ -23,7 +23,7 @@ npm install
 # 启动服务
 npm run dev
 ```
-浏览器访问: http://localhost:8080/vue-dapp-demo/
+浏览器访问: http://localhost:8080
 
 ## 发布
 ```bash
