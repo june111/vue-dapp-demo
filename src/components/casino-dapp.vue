@@ -8,6 +8,7 @@
     </div> -->
     <!-- 标题   -->
     <h1>Welcome to the Casino</h1>
+      <p>TX: {{tx}}</p>
     <p>Prize pool：{{contractBalance}} ETH</p>
     Bet:
     <input v-model="amount" placeholder="0">Ether
@@ -91,7 +92,8 @@ export default {
       isChooseNum:false,
       luckyNum: null,
 
-      Numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      Numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      tx:null,
 
     }
   },
@@ -188,6 +190,7 @@ export default {
               this.pending = false
               console.log(err)
             } else {
+              this.tx = result
               //捕捉 event
               let Won = this.casino.Won()
               Won.watch((err, result) => {
