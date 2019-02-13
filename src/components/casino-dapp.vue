@@ -8,7 +8,7 @@
     </div> -->
     <!-- 标题   -->
     <h1>Welcome to the Casino</h1>
-      <p>TX: {{tx}}</p>
+    <!-- <p>TX: {{tx}}</p> -->
     <p>Prize pool：{{contractBalance}} ETH</p>
     Bet:
     <input v-model="amount" placeholder="0">Ether
@@ -24,7 +24,7 @@
     <!-- 用户信息 -->
     <p class="address">Address：{{myAddress}}</p>
     <p>Balance：{{accountBalance}} ETH</p>
-      <p v-if="isChooseNum">The number you guess is：{{chooseNum}}</p>
+    <p v-if="isChooseNum">The number you guess is：{{chooseNum}}</p>
     <div class="event" v-if="winEvent">
       <p>Lucky number is {{luckyNum}}</p>
       <p v-if="winEvent._status" class="green">
@@ -89,11 +89,11 @@ export default {
       contractBalance: 0,
 
       chooseNum: null,
-      isChooseNum:false,
+      isChooseNum: false,
       luckyNum: null,
 
       Numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      tx:null,
+      tx: null,
 
     }
   },
@@ -181,14 +181,14 @@ export default {
         this.pending = true
         if (this.isMetamask) {
           this.casino.bet(number, {
-            gas: 300000, //Gas Limit
+            gas: 300000, //Gas Limit 300000
             gasPrice: window.web3.toWei('0.000000001', 'ether'), // 1 Gwei
             value: window.web3.toWei(this.amount, 'ether'),
             from: window.web3.eth.coinbase
           }, (err, result, data) => {
             if (err) {
               this.pending = false
-              console.log(err)
+              console.error(err)
             } else {
               this.tx = result
               //捕捉 event
